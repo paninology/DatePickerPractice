@@ -54,14 +54,25 @@ class ViewController: UIViewController {
     func labelSetting() {
         for n in 0...(dDayLabels.count - 1) {
             dDayLabels[n].textColor = .white
-            centerLabels[n].textColor = .white
             dDayLabels[n].font = .preferredFont(forTextStyle: .headline)
+            centerLabels[n].textColor = .white
+            centerLabels[n].textAlignment = .center
         }
     }
     
     @available(iOS 15.0, *)
     func dateCal() {
-        centerLabels[0].text = Date().formatted(date: .abbreviated, time: .omitted)
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy년 \n MM월 dd일"
+        
+        centerLabels[0].text =
+        formatter.string(from: Date())
+        
+//        Date().formatted(date: .abbreviated, time: .omitted)
+        
+        centerLabels[1].text = Date().addingTimeInterval(60*60*24*100).formatted(date: .complete, time: .shortened)
+        centerLabels[2].text = Date().addingTimeInterval(3600*24*200).formatted(date: .long, time: .omitted)
+        centerLabels[3].text = Date().addingTimeInterval(3600*24*300).formatted(date: .numeric, time: .standard)
     }
     
     
