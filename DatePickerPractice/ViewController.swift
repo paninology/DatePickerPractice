@@ -9,9 +9,31 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var datePicker: UIDatePicker!
+    
+    @IBOutlet var imageViews: [UIImageView]!
+    
+    @IBOutlet var backgroundImages: [UIImageView]!
+    
+    @IBOutlet var dDayLabels: [UILabel]!
+    
+    @IBOutlet var centerLabels: [UILabel]!
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    
+        datePicker.preferredDatePickerStyle = .wheels
+        
+        
+       
+        datePicker.preferredDatePickerStyle = .inline
+        
+        
+        
+        
     }
 
 
