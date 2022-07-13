@@ -41,6 +41,7 @@ class ViewController: UIViewController {
             backgroundImages[n].layer.cornerRadius = 20
             backgroundImages[n].clipsToBounds = true
             backgroundImages[n].alpha = 0.3
+            
         }
     }
     
@@ -50,6 +51,10 @@ class ViewController: UIViewController {
             centerLabels[n].textColor = .white
             dDayLabels[n].font = .preferredFont(forTextStyle: .headline)
         }
+    }
+    
+    func dateCal() {
+        
     }
     
     
