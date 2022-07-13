@@ -31,6 +31,12 @@ class ViewController: UIViewController {
         imageSetting()
         labelSetting()
         
+        if #available(iOS 15.0, *) {
+            dateCal()
+        } else {
+            // Fallback on earlier versions
+        }
+        
     }
 
     
@@ -53,8 +59,9 @@ class ViewController: UIViewController {
         }
     }
     
+    @available(iOS 15.0, *)
     func dateCal() {
-        
+        centerLabels[0].text = Date().formatted(date: .abbreviated, time: .omitted)
     }
     
     
