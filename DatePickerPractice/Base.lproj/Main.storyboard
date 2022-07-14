@@ -19,6 +19,9 @@
                         <subviews>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="0HB-N5-0xS">
                                 <rect key="frame" x="0.0" y="52" width="414" height="380"/>
+                                <connections>
+                                    <action selector="dateValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="2tV-Pn-cdq"/>
+                                </connections>
                             </datePicker>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TT9-6a-BOD">
                                 <rect key="frame" x="0.0" y="440" width="414" height="448"/>
